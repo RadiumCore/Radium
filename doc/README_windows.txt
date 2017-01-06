@@ -1,0 +1,19 @@
+radium 1.4.0.2
+
+Copyright (c) 2015-2016 Radium Developers
+Copyright (c) 2014-2016 Blackcoin Developers
+Copyright (c) 2013 NovaCoin Developers
+Copyright (c) 2011-2012 PPCoin Developers
+Distributed under the MIT/X11 software license, see the accompanying
+file license.txt or http://www.opensource.org/licenses/mit-license.php.
+This product includes software developed by the OpenSSL Project for use in
+the OpenSSL Toolkit (http://www.openssl.org/).  This product includes
+cryptographic software written by Eric Young (eay@cryptsoft.com).
+
+Website: http://projectradium.org
+Forum: https://bitcointalk.org/index.php?topic=1333026.0
+
+Intro
+-----
+Radium is the base blockchain upon which all Project Radium decentralized services are built. The central Project Radium service in active development is the Radium SmartChain. See https://github.com/JJ12880/SmartChain for more details.
+

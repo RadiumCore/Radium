@@ -1,0 +1,5 @@
+# List of fixed seed nodes for testnet
+useast.projectradium.org
+eu.projectradium.org
+asia.projectradium.org
+# Feel free to create some more and let us know their IP!

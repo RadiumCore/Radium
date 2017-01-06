@@ -1,0 +1,9 @@
+Building radium
+
+See doc/readme-qt.rst for instructions on building radium QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of radium.
+
+See doc/build-*.txt for instructions on building radiumd,
+the intended-for-services, no-graphical-interface, reference
+implementation of radium.

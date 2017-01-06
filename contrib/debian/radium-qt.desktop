@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=radium
+Comment=radium P2P Cryptocurrency
+Comment[fr]=radium, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=radium, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/radium-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/bitcoin80.xpm
+MimeType=x-scheme-handler/radium;
+Categories=Office;
