@@ -1,6 +1,8 @@
 # Radium
 Radium is a proof of stake cryptocurrency, forming the backbone of Radium SmartChain services.
 
+To view the old Radium GitHub repository please [click here](https://github.com/ProjectRadium/Radium).
+
 Development Schedule
 ===========================
 Development is primarily focused on Radium SmartChain services. Periodic maintence updates will be made to this repository.
