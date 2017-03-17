@@ -1105,10 +1105,8 @@ int64_t GetRunningFee(int64_t nFees,  const CBlockIndex* pindexPrev){
     CTxDB txdb("r");
     //dont know if this line is needed or not. Probally not?
     const CBlockIndex* pblockindexTmp = pindexPrev;
-    LogPrintf("---------------------->Getting fee for block :%d Current best %d\n" , pindexPrev->nHeight+1 ,pblockindexTmp->nHeight );
-
-
-    LogPrintf("---------------------->Loop start block: %d\n hash: %s\n",pblockindexTmp->nHeight ,pblockindexTmp->phashBlock->ToString() );
+    //LogPrintf("---------------------->Getting fee for block :%d Current best %d\n" , pindexPrev->nHeight+1 ,pblockindexTmp->nHeight );
+    //LogPrintf("---------------------->Loop start block: %d\n hash: %s\n",pblockindexTmp->nHeight ,pblockindexTmp->phashBlock->ToString() );
     //LogPrintf("---------------------->Loop start hash: %s\n",pblockindexTmp->phashBlock->ToString());
     while (pblockindexTmp->nHeight > startHeight-(AVG_FEE_SPAN-1)){
         int64_t blockFee=0;
@@ -1157,8 +1155,8 @@ int64_t GetRunningFee(int64_t nFees,  const CBlockIndex* pindexPrev){
     }
     nRFee=(int64_t)((nCumulatedFee+nFees)/(feesCount+1));
     if (!MoneyRange(nRFee))nRFee=0;
-    LogPrintf("---------------------->Fee:%d\n",(int)nFees);
-    LogPrintf("---------------------->RFee:%d\n",(int)nRFee);
+    //LogPrintf("---------------------->Fee:%d\n",(int)nFees);
+    //LogPrintf("---------------------->RFee:%d\n",(int)nRFee);
     if(mapFeeCache.size()>50000)mapFeeCache.clear(); //clear cache if it gets too big to avoid memory bloating
     return nRFee;
 }
