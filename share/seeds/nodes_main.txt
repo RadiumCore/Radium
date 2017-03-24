@@ -4,6 +4,8 @@
 useast.projectradium.org
 eu.projectradium.org
 asia.projectradium.org
+us.radiumcore.org
+eu.radiumcore.org
 
 # Variable IPV4 seed nodes
 109.168.244.245

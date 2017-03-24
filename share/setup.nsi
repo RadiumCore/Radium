@@ -5,9 +5,9 @@ SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 1.4.0.2
-!define COMPANY "Project Radium"
-!define URL http://www.projectradium.org/
+!define VERSION 1.4.6.0
+!define COMPANY "Radium Core"
+!define URL https://www.radiumcore.org/
 
 # MUI Symbol Definitions
 !define MUI_ICON "../share/pixmaps/radium.ico"
