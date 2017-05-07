@@ -44,6 +44,7 @@ namespace Checkpoints
         ( 655200,   uint256("0x0dbcd2799042832cb3c1c0255e34b1ca797d30db9438d836e9e830394e98b999 ") ) // Radium 1.4.5 Code release
         ( 700000,   uint256("0x6ceebeff2760988638367e5e91a9061bdc9623db1dceeaa7cef1eb8da88ec2bd ") )
         ( 800000,   uint256("0xbce932a50e264133d5456f1a8076552f5186f3f6ff46310f4c769ae83c4a1723 ") )
+        ( 900000,   uint256("0x5c58c0b472ab44dbde75c31e549615fc00feea3a93844d8c78837b2e85245c4e ") )
       ;
 
     // TestNet has no checkpoints
