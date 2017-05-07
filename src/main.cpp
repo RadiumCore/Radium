@@ -2120,7 +2120,7 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
 
     // Check timestamp
     if (GetBlockTime() > FutureDriftV2(GetAdjustedTime()))
-       return error("CheckBlock() : block timestamp too far in the future %n ",(FutureDriftV2(GetAdjustedTime())-GetBlockTime()));
+       return error("CheckBlock() : block timestamp too far in the future %u ",(FutureDriftV2(GetAdjustedTime())-GetBlockTime()));
 
     // First transaction must be coinbase, the rest must not be
     if (vtx.empty() || !vtx[0].IsCoinBase())
