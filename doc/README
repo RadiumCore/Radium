@@ -1,6 +1,6 @@
-radium 1.4.0.2
+radium 1.4.6.0
 
-Copyright (c) 2015-2016 Radium Developers
+Copyright (c) 2015-2017 Radium Core Developers
 Copyright (c) 2014-2016 Blackcoin Developers
 Copyright (c) 2013 NovaCoin Developers
 Copyright (c) 2011-2012 PPCoin Developers
@@ -10,7 +10,7 @@ This product includes software developed by the OpenSSL Project for use in
 the OpenSSL Toolkit (http://www.openssl.org/).  This product includes
 cryptographic software written by Eric Young (eay@cryptsoft.com).
 
-Website: http://projectradium.org
+Website: https://radiumcore.org
 Forum: https://bitcointalk.org/index.php?topic=1333026.0
 
 Intro

@@ -1105,10 +1105,8 @@ int64_t GetRunningFee(int64_t nFees,  const CBlockIndex* pindexPrev){
     CTxDB txdb("r");
     //dont know if this line is needed or not. Probally not?
     const CBlockIndex* pblockindexTmp = pindexPrev;
-    LogPrintf("---------------------->Getting fee for block :%d Current best %d\n" , pindexPrev->nHeight+1 ,pblockindexTmp->nHeight );
-
-
-    LogPrintf("---------------------->Loop start block: %d\n hash: %s\n",pblockindexTmp->nHeight ,pblockindexTmp->phashBlock->ToString() );
+    //LogPrintf("---------------------->Getting fee for block :%d Current best %d\n" , pindexPrev->nHeight+1 ,pblockindexTmp->nHeight );
+    //LogPrintf("---------------------->Loop start block: %d\n hash: %s\n",pblockindexTmp->nHeight ,pblockindexTmp->phashBlock->ToString() );
     //LogPrintf("---------------------->Loop start hash: %s\n",pblockindexTmp->phashBlock->ToString());
     while (pblockindexTmp->nHeight > startHeight-(AVG_FEE_SPAN-1)){
         int64_t blockFee=0;
@@ -1157,8 +1155,8 @@ int64_t GetRunningFee(int64_t nFees,  const CBlockIndex* pindexPrev){
     }
     nRFee=(int64_t)((nCumulatedFee+nFees)/(feesCount+1));
     if (!MoneyRange(nRFee))nRFee=0;
-    LogPrintf("---------------------->Fee:%d\n",(int)nFees);
-    LogPrintf("---------------------->RFee:%d\n",(int)nRFee);
+    //LogPrintf("---------------------->Fee:%d\n",(int)nFees);
+    //LogPrintf("---------------------->RFee:%d\n",(int)nRFee);
     if(mapFeeCache.size()>50000)mapFeeCache.clear(); //clear cache if it gets too big to avoid memory bloating
     return nRFee;
 }
@@ -2120,7 +2118,7 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
 
     // Check timestamp
     if (GetBlockTime() > FutureDriftV2(GetAdjustedTime()))
-       return error("CheckBlock() : block timestamp too far in the future %n ",(FutureDriftV2(GetAdjustedTime())-GetBlockTime()));
+       return error("CheckBlock() : block timestamp too far in the future %u ",(FutureDriftV2(GetAdjustedTime())-GetBlockTime()));
 
     // First transaction must be coinbase, the rest must not be
     if (vtx.empty() || !vtx[0].IsCoinBase())
@@ -2398,6 +2396,9 @@ bool ProcessBlock(CNode* pfrom, CBlock* pblock)
     if (!mapBlockIndex.count(pblock->hashPrevBlock))
     {
         LogPrintf("ProcessBlock: ORPHAN BLOCK %lu, prev=%s\n", (unsigned long)mapOrphanBlocks.size(), pblock->hashPrevBlock.ToString());
+        
+        if (fBanForOrphans)
+                pfrom->Misbehaving(1);
 
         // Accept orphans as long as there is a node to request its parents from
         if (pfrom) {

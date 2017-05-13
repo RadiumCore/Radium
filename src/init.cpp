@@ -37,6 +37,7 @@ CWallet* pwalletMain = NULL;
 CClientUIInterface uiInterface;
 bool fConfChange;
 bool fListChange;
+bool fBanForOrphans;
 unsigned int nNodeLifespan;
 unsigned int nDerivationMethodIndex;
 unsigned int nMinerSleep;
@@ -188,6 +189,7 @@ std::string HelpMessage()
     strUsage += "  -bantime=<n>           " + _("Number of seconds to keep misbehaving peers from reconnecting (default: 86400)") + "\n";
     strUsage += "  -maxreceivebuffer=<n>  " + _("Maximum per-connection receive buffer, <n>*1000 bytes (default: 5000)") + "\n";
     strUsage += "  -maxsendbuffer=<n>     " + _("Maximum per-connection send buffer, <n>*1000 bytes (default: 1000)") + "\n";
+    strUsage += "  -banfororphans         " + _("Will increment node banscore when receiving orphan block. (default: false)") + "\n";
     strUsage += "  -listchange            " + _("Enable listing of change transactions by RPC call listtransactions") + "\n";
 #ifdef USE_UPNP
 #if USE_UPNP
@@ -338,6 +340,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     fUseFastIndex = GetBoolArg("-fastindex", true);
     nMinerSleep = GetArg("-minersleep", 500);
     fListChange = GetBoolArg("-listchange", false);
+    fBanForOrphans = GetBoolArg("-banfororphans", false);
 
     nDerivationMethodIndex = 0;
 
