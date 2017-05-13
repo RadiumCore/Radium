@@ -2396,6 +2396,9 @@ bool ProcessBlock(CNode* pfrom, CBlock* pblock)
     if (!mapBlockIndex.count(pblock->hashPrevBlock))
     {
         LogPrintf("ProcessBlock: ORPHAN BLOCK %lu, prev=%s\n", (unsigned long)mapOrphanBlocks.size(), pblock->hashPrevBlock.ToString());
+        
+        if (fBanForOrphans)
+                pfrom->Misbehaving(1);
 
         // Accept orphans as long as there is a node to request its parents from
         if (pfrom) {
