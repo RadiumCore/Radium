@@ -543,6 +543,7 @@ public:
         int nFound = 0;
         if (b.empty())
             return nFound;
+        CScript result;
         iterator pc = begin(), pc2 = begin();
         opcodetype opcode;
         do
