@@ -1,13 +1,7 @@
-# List of fixed and variable seed nodes for the network
-
-# Fixed IPV4 seed nodes
-useast.projectradium.org
-eu.projectradium.org
-asia.projectradium.org
-us.radiumcore.org
-eu.radiumcore.org
-
-# Variable IPV4 seed nodes
+52.59.241.100
+54.238.147.66
+13.92.120.211
+52.174.98.50
 109.168.244.245
 123.211.51.243
 141.135.162.20
@@ -29,9 +23,3 @@ eu.radiumcore.org
 88.96.204.48
 88.96.204.54
 95.69.228.97
-
-# IPv6 nodes
-# Feel free to create some and let us know their IP!
-
-# Onion nodes
-# Feel free to create some and let us know their IP!
