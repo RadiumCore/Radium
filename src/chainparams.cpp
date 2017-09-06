@@ -85,12 +85,7 @@ public:
         assert(hashGenesisBlock == uint256("0x000000770c6aea829bb1ace7b06497f71799a6358e0e292740c4f9443a17bfb6"));
         assert(genesis.hashMerkleRoot == uint256("0xa02b3388d9e8529bb0136ed3e1b823e808cbe128050e5986bf2a5a0d2c71a826"));
 
-        vSeeds.push_back(CDNSSeedData("us.radiumcore.org", "us.radiumcore.org"));
-        vSeeds.push_back(CDNSSeedData("eu.radiumcore.org", "eu.radiumcore.org"));
         vSeeds.push_back(CDNSSeedData("useast.projectradium.org", "useast.projectradium.org"));
-        vSeeds.push_back(CDNSSeedData("asia.projectradium.org", "asia.projectradium.org"));
-        vSeeds.push_back(CDNSSeedData("eu.projectradium.org", "eu.projectradium.org"));
-
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,76);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,58);
